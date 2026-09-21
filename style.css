@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)),
+    url("background.jpg");
+  background-size: cover;
+  background-position: center-top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #D4AF37;
+  font-family: Arial,Sans-Serif;
+  text-align: center;
+}
+h1 {
+  font-size: 48px;
+  color: #D4AF37;
+  text-shadow:2px 2px 8px black;
+}
+h2 {
+  font-size: 38px;
+  color: #D4AF37;
+}
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 20px auto;
+}
+img {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 15px;
+}
+button:hover {
+  background: #D4AF37;
+  cursor: pointer;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  padding: 15px 0;
+  z-index: 1000;
+}
+nav a {
+  color: #D4AF37;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #D4AF37;
+}
+button {
+  background-color: #C98A3D;
+  color: black;
+  border: none;
+  padding:15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color:#D9A441;
+  transform: scale(1.08);
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  padding: 60px 20px;
+}
+#contact {
+  text-align: center;
+  background-color: #111;
+  color: #D4AF37;
+}
+#contact h2 {
+  color: #D4AF37;
+  font-size: 30px;
+}
+#contact p {
+  font-size: 18px;
+  margin: 12px 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+ul li {
+  font-size: 18px;
+  margin: 8px 0;
+}
+#gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+}
+#gallery img,
+#gallery video {
+  flex: 0 0 75%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: brightness(70%);
+  scroll-snap-align: center;
+  
+  box-shadow:
+  0 0 8px #D9A441,
+  0 0 18px rgba(217, 164, 65, 0.55),
+  0 0 30px rgba(217,164, 65, 0.55);
+}
+.liviu-photo {
+  width: 80%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow:
+  0 0 8px #D9A441,
+  0 0 8px rgba(217, 164, 65,0.55),
+  0 0 30px rgba(217, 164,65,0.55);
+}
+#about {
+  padding-top: 0px;
+  padding-bottom: 15px;
+}
+h1, h2, nav a {
+  font-family: "BrushScript MT" ,cursive;
+  font-weight: normal;
+  color: #D9A441;
+}
+#about p {
+  font-family: "Pinyon Script", cursive;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+#review-form {
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0 22px;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating label {
+  color: #5e5035
+  font-size: 42px;
+  cursor: pointer;
+  transition: 0,25s;
+  text-shadow: 0 0 3px #000
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label{
+  color: #d9a441
+  transform: scale(1.15);
+  text: shadow;
+  0 0 6px #D9A441,
+  0 0 14px #C98A3D;
+}
+#review-name,
+#review-text {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin 10px auto;
+  padding: 12px 15px;
+  color: #f5e4bd;
+  background: rgba(8, 8, 0.82)
+  border: 1px solid #c98a3d;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+#review-text {
+  min-height: 100px;
+  resize: vertical;
+}
+#review-name:focus,
+#review-text:focus{
+  border-colour: #D9A441;
+  box-shadow: 0 0 10px rgba(217, 164, 65, 0.65);
+}
+#review-form button {
+  margin-top: 15px;
+  min-width: 230px;
+  padding: 12px 34px;
+  color: #D9A441;
+  background: linear-gradient(
+    180deg,
+    #4b321d0%,
+    #17100b 50%,
+    #3a2617 100%
+  );
+  border: 3px double #D9A441;
+  border-radius: 28px;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  box: shadow:
+  0 0 8px rgba(217, 164, 65, 0.7),
+  inset 0 0 10px rgba(217, 164, 65, 0.25);
+}
+<style>
+.review-form .review-msg { margin-top: 8px; min-height: 1em; font-size: 0.75rem; color: #f5d27a; }
+</style>
+#review-form button:hover {
+  color: #f1c66d;
+  background: linear-gradient(
+    180deg,
+    #604225,
+    #21150d,
+    #4a301c
+  );
+#open-review {
+  display: block;
+  width: 260px;
+  margin: 20px auto;
+  padding: 0 !important;
+  border: none !important;
+  outline: none;
+  background: transparent !important;
+  background-color: none !important;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+  #open-review:hover,
+  #open-review:focus,
+  #open-review:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+#open-review img {
+  display: block;
+  width: 193%;
+  max-width: none;
+  height: auto;
+  transform: translate(-24.2%, -18.6%);
+  border-radius: 0;
+}
+.hidden {
+  display: none;
+}
+  :root {
+  --rv-ink: #1c2530;
+  --rv-muted: #5b6673;
+  --rv-line: #dfe4ea;
+  --rv-bg: #ffffff;
+  --rv-accent: #0f5c63;
+  --rv-star: #d9931a;
+  --rv-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --rv-quote: Georgia, "Times New Roman", serif;
+}
+
+#gallery img {
+  filter: brightness(1.18) contrast(1.05);
+  opacity: 1;
+}
+#gallery video {
+  filter: brightness(1.18) contrast(1.05);
+}
+
+#review-form {
+  display: block;
+  width: 260px; 
+  height: 168px;
+  margin: 20px auto;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 14px;
+  background: transparent !important;
+  cursor: pointer;
+}
+
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 6px;
+    margin: 8px 0 18px;
+  }
+  .star-rating input {
+    display: none;
+  }
+#review-form h3 {
+  margin: 0 0 10px;
+  color: #D9A441;
+  font-size: 24px;
+}
+
+.star-rating {
+  gap: 6px;
+  margin: 8px 0 18px;
+}
+
+.star-rating label {
+  color: #5e5035;
+  font-size: 34px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+#review-name,
+#review-text {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #f5e4bd;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(217, 164, 65, 0.65);
+  border-radius: 8px;
+  Font-size: 16px;
+  outline: none;
+}
+
+#review-text {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#review-form button {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  margin:14px auto 0;
+  padding: 10px 24px;
+  color: #0b0b0b;
+  background: #D9A441;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+#review-form button:hoover {
+  color: #0b0b0b;
+  background: #c98a3d;
+  transform: none;
+}
+
+#review-form.hidden {
+  display: none !important;
+}
